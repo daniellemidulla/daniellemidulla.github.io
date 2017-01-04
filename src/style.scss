@@ -1,34 +1,128 @@
 //style.scss
 
+//mixins
+@mixin flex-box {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+}
+
+@mixin inline-flex-box {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+}
+
+@mixin flex-space-around {
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+}
+
+@mixin flex-space-between {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+}
+
+@mixin flex-column {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+}
+
+@mixin flex-item-align-center {
+  align-self: center;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+}
+
+//Generic classes
+.flex-container {
+  width: 100%;
+  @include flex-box;
+}
+
+.flex-container-column {
+  width: 100%;
+  @include flex-box;
+  @include flex-column;
+}
+
+.flex-sa-container {
+  width: 100%;
+  @include flex-box;
+  @include flex-space-around;
+}
+
+.container {
+  @include inline-flex-box;
+}
+
+//Navigation
+.nav {
+  width: 100%;
+  @include flex-box;
+
+  li {
+    width: 15%;
+
+    &:hover {
+      background-color: grey;
+    }
+
+    @include inline-flex-box;
+  }
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: white;
+  }
+}
+
+//Skills Table
+.skills-table {
+  @include inline-flex-box;
+  @include flex-column;
+}
+
+.skill-bbl {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: grey;
+}
+
+.learned {
+  background-color: green;
+}
+
+.in-progress {
+  background-color: yellow;
+}
+
+.key {
+  @include inline-flex-box;
+  @include flex-item-align-center;
+}
+
 //Contact Me
 .contact-me {
   height: 32px;
+  width: 25%;
+  @include flex-space-between;
 }
 
 .contact-btn {
-  height: 32px;
-  line-height: 32px;
-  width: 32px;
-  display: inline-block;
   background-color: transparent;
-}
 
-.email {
-    &:hover {
-      text-decoration: none;
-    }
-    span {
-      line-height: 32px;
-      width: 32px;
-      height: 32px;
-      text-align: center;
-    }
-}
-
-.github {
-  border-radius: 32px;
-
-  .not-hover {
+  img {
+    height: 32px;
+    width: auto;
     display: inline-block;
   }
 
@@ -39,12 +133,23 @@
   &:hover{
     background-color: black;
 
-    .not-hover {
-      display:none;
-    }
-
     .hover {
       display: inline-block;
     }
+
+    .not-hover {
+      display:none;
+    }
   }
+}
+
+.email {
+  border-radius: 32px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.github {
+  border-radius: 32px;
 }

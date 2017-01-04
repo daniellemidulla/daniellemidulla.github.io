@@ -3,32 +3,114 @@
   <head>
     <title>daniellemidulla.me</title>
     <link href="build/bundle.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body class="container-fluid">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><a href="">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Contact</a></li>
+  <body>
+    <nav class="navbar flex-container">
+        <ul class="nav">
+          <li><a class="nav-link" href="">Home</a></li>
+          <li><a class="nav-link" href="#">About Me</a></li>
+          <li><a class="nav-link" href="#">Contact</a></li>
         </ul>
-      </div>
     </nav>
-    <div class="top-picture jumbotron">
+    <div class="top-picture flex-container">
+      <a class="resume" href="/resume.pdf">Resume</a>
       <img />
     </div>
-    <div class="about-me container-fluid">
-      <p>
-        A picture of yourself
-      </p>
-      <p>
-        Your name
-      </p>
-      <p>
-        Where you’re from/where you live
-      </p>
+    <h1>About Me</h1>
+    <div class="about-me flex-container-column">
+      <img alt="picture of me" />
+      <div class="container">
+        Hello, my name is Danielle Midulla.
+        I am a Computer Science major at Dartmouth College with an expected graduation date of June 2017.
+        I was born and raised in New York City.
+        While at DALI, I work as a developer.
+        I really enjoy working at DALI because I always end up working on really interesting projects.
+      </div>
+      <div class="flex-container">
+        Here are some skills and languages that I have learned and am still learning.
+      </div>
+      <div class="flex-container skills">
+        <table class="skills-table">
+          <caption>Front-end Skills</caption>
+          <tr>
+            <td>JavaScript</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+            <td class="skill-bbl"></td>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+            <td class="skill-bbl"></td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+          </tr>
+          <tr>
+            <td>Sass</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+            <td class="skill-bbl"></td>
+          </tr>
+        </table>
+        <table class="skills-table">
+          <caption>Back-end Skills</caption>
+          <tr>
+            <td>Python</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+            <td class="skill-bbl"></td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+            <td class="skill-bbl"></td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+            <td class="skill-bbl"></td>
+            <td class="skill-bbl"></td>
+          </tr>
+          <tr>
+            <td>Ruby on Rails</td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl learned"></td>
+            <td class="skill-bbl in-progress"></td>
+            <td class="skill-bbl"></td>
+            <td class="skill-bbl"></td>
+          </tr>
+        </table>
+        <div class="key">
+          <div>Legend:</div>
+          <div class="skill-bbl"></div>
+          <div>Not Yet</div>
+          <div class="skill-bbl in-progress"></div>
+          <div>In Progress</div>
+          <div class="skill-bbl learned"></div>
+          <div>Proficient</div>
+        </div>
+      </div>
       <p>
         A short bio telling us about yourself (you might include/mention: design/programming applications you know, what you enjoy most about ui/ux design/development, why you’re excited to work with DALI.)
       </p>
@@ -36,17 +118,19 @@
         Something interesting about yourself :-)
       </p>
     </div>
-    <div class="container-fluid">
-      <div class="contact-me container-fluid pager">
+    <h1>Contact me:</h1>
+    <div class="flex-sa-container">
+      <div class="container contact-me">
         <a class="email contact-btn" href="mailto:danielle.midulla@gmail.com">
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+          <img src="./assets/email-icon-130.png" alt="Email" class="not-hover"/>
+          <img src="./assets/email-icon-130-white.png" alt="Email" class="hover"/>
         </a>
         <a class="github contact-btn" href="https://github.com/daniellemidulla">
           <img src="./assets/GitHub-Mark-32px.png" alt="Github" class="not-hover"/>
           <img src="./assets/GitHub-Mark-Light-32px.png" alt="Github" class="hover"/>
         </a>
         <a class="linkedin contact-btn" href="https://www.linkedin.com/in/daniellemidulla">
-          LinkedIn
+          <img src="./assets/In-2C-34px-TM.png" alt="LinkedIn" />
         </a>
       </div>
     </div>
