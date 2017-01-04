@@ -1,0 +1,50 @@
+//style.scss
+
+//Contact Me
+.contact-me {
+  height: 32px;
+}
+
+.contact-btn {
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.email {
+    &:hover {
+      text-decoration: none;
+    }
+    span {
+      line-height: 32px;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+    }
+}
+
+.github {
+  border-radius: 32px;
+
+  .not-hover {
+    display: inline-block;
+  }
+
+  .hover {
+    display: none;
+  }
+
+  &:hover{
+    background-color: black;
+
+    .not-hover {
+      display:none;
+    }
+
+    .hover {
+      display: inline-block;
+    }
+  }
+}
