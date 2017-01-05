@@ -24,6 +24,11 @@
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
 }
+@mixin flex-justify-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+}
 
 @mixin flex-column {
   flex-direction: column;
@@ -35,6 +40,12 @@
   align-self: center;
   -webkit-align-self: center;
   -moz-align-self: center;
+}
+
+@mixin flex-row-wrap {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
 }
 
 //Generic classes
@@ -83,7 +94,50 @@
   }
 }
 
-//Skills Table
+// Top Picture
+.fish-photo {
+  width: 100%;
+  height: 100%;
+}
+
+.resume {
+  position: relative;
+  right: 10%;
+  background-color: grey;
+  color: black;
+  text-decoration: none;
+  height: fit-content;
+  margin-top: 15px;
+  line-height: 3;
+  padding: 0 15px;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+// About Me
+.about-me {
+  // @include flex-row-wrap;
+  // @include flex-justify-center;
+}
+
+.ski-photo {
+  float: left;
+  margin-right: 10px;
+  width: 25%;
+  height: 25%;
+}
+
+.me-text {
+  display: block;
+  // width: 75%;
+}
+
+// Skills Table
+.skills {
+  @include flex-column;
+}
 .skills-table {
   @include inline-flex-box;
   @include flex-column;
@@ -152,4 +206,8 @@
 
 .github {
   border-radius: 32px;
+}
+
+.linkedin {
+  background-color: transparent;
 }
