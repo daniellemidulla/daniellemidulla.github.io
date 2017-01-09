@@ -103,16 +103,17 @@
 .resume {
   position: relative;
   right: 10%;
-  background-color: grey;
-  color: black;
+  background-color: rgba(0, 0, 0, .1);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
   text-decoration: none;
   height: fit-content;
   margin-top: 15px;
   line-height: 3;
   padding: 0 15px;
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
   }
 }
 
