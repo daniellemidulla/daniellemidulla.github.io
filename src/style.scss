@@ -7,7 +7,7 @@ $nav-height: 60px;
 $linkedin-blue: #1778B5;
 $resume-color: rgb(130, 130, 130);
 $learned-color: #51DF93;
-$ip-color: #FF9171; //#FFD340;
+$red: #FF9171; //#FFD340;
 $not-yet-color: $resume-color; //#FF9171;
 $nav-color: rgba(255, 255, 255, .8);
 $purple: #DCA6FF;
@@ -170,7 +170,7 @@ h1 {
 
 // Top Picture
 .top-picture {
-  height: 400px;
+  height: 500px;
   background-image: url('/assets/fish-photo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -241,20 +241,6 @@ h1 {
 
 .learned {
   background-color: $learned-color;
-}
-
-.in-progress {
-  background-color: $ip-color;
-}
-
-.key {
-  @include flex-justify-center;
-  @include flex-align-center;
-}
-
-.key-bbl {
-  margin: 5px;
-  @include flex-align-center;
 }
 
 .divider {
