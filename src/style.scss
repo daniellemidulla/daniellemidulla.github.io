@@ -1,4 +1,16 @@
 //style.scss
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+$ski-width: 200px;
+$back-color: #F0F0F0;
+$nav-height: 60px;
+$linkedin-blue: #1778B5;
+$resume-color: rgb(130, 130, 130);
+$learned-color: #51DF93;
+$ip-color: #FF9171; //#FFD340;
+$not-yet-color: $resume-color; //#FF9171;
+$nav-color: rgba(255, 255, 255, .8);
+$purple: #DCA6FF;
 
 //mixins
 @mixin flex-box {
@@ -24,6 +36,7 @@
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
 }
+
 @mixin flex-justify-center {
   justify-content: center;
   -webkit-justify-content: center;
@@ -36,21 +49,38 @@
   -moz-flex-direction: column;
 }
 
-@mixin flex-item-align-center {
-  align-self: center;
-  -webkit-align-self: center;
-  -moz-align-self: center;
+@mixin flex-justify-end {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
 }
 
-@mixin flex-row-wrap {
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
+@mixin flex-align-center {
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+}
+
+body {
+  font-family: Georgia;
+  font-size: 12pt;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 40pt;
+  margin: 0;
+  // color: #B94FFD;
 }
 
 //Generic classes
 .flex-container {
   width: 100%;
+  @include flex-box;
+}
+
+.flex {
   @include flex-box;
 }
 
@@ -61,87 +91,143 @@
 }
 
 .flex-sa-container {
-  width: 100%;
-  @include flex-box;
+  @include inline-flex-box;
   @include flex-space-around;
 }
 
-.container {
+.in-flex-container {
   @include inline-flex-box;
 }
 
 //Navigation
-.nav {
-  width: 100%;
-  @include flex-box;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $nav-height;
+  background-color: rgba(255, 255, 255, .8);
+  // padding: 0 15px;
+  @include flex-align-center;
+  @include flex-space-between;
+}
 
-  li {
-    width: 15%;
-
-    &:hover {
-      background-color: grey;
-    }
-
-    @include inline-flex-box;
+#nav-home {
+  color: $purple;
+  height: $nav-height - 10;
+  line-height: $nav-height - 10;
+  width: $nav-height - 10;
+  border-radius: $nav-height - 10;
+  background-color: $back-color;
+  font-family: 'Sacramento', cursive;
+  margin: 0 15px;
+  &:hover {
+    background-color: $resume-color;
   }
 }
+
+.nav-btns {
+  @include flex-align-center;
+}
+
 .nav-link {
+  height: $nav-height;
+  line-height: $nav-height;
+  width: 100px;
+  color: #000000;
   text-decoration: none;
-  color: black;
+  text-align: center;
 
   &:hover {
-    color: white;
+    background-color: $resume-color;
+    color: $nav-color;
   }
-}
-
-// Top Picture
-.fish-photo {
-  width: 100%;
-  height: 100%;
 }
 
 .resume {
-  position: relative;
-  right: 10%;
-  background-color: rgba(0, 0, 0, .1);
-  color: rgb(255, 255, 255);
+  display: block;
+  background-color: $resume-color;
+  color: $nav-color;
   border-radius: 10px;
+  border:  2px solid $resume-color;
   text-decoration: none;
-  height: fit-content;
-  margin-top: 15px;
-  line-height: 3;
-  padding: 0 15px;
+  height: $nav-height - 10px;
+  line-height: $nav-height - 10px;
+  width: fit-content;
+  padding: 0 25px;
+  margin: 0 15px;
   &:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0,0,0);
+    background-color: $nav-color;
+    color: $resume-color;
+    // border-color: $resume-color;
   }
 }
 
+.main-content {
+  margin: $nav-height 100px 0 100px;
+  background-color: $back-color;
+  min-width: $ski-width;
+}
+
+// Top Picture
+.top-picture {
+  height: 400px;
+  background-image: url('/assets/fish-photo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include flex-align-center;
+  @include flex-justify-end;
+}
+
 // About Me
-.about-me {
-  // @include flex-row-wrap;
-  // @include flex-justify-center;
+#about-me {
+  margin: 0 15px;
+}
+
+.my-name {
+  font-size: 60pt;
+  text-align: center;
+  margin: 25px 0 -25px 0;
+}
+
+.about-title {
+  @include flex-justify-center;
 }
 
 .ski-photo {
   float: left;
   margin-right: 10px;
-  width: 25%;
-  height: 25%;
+  margin-bottom: 10px;
+  width: $ski-width;
 }
 
 .me-text {
-  display: block;
-  // width: 75%;
+  padding: 10px 0;
 }
 
 // Skills Table
-.skills {
+#skills {
+  @include flex-column;
+  @include flex-align-center;
+}
+
+.skills-txt {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.tables {
+  border: 1px solid black;
+  @include flex-justify-center;
+}
+
+.skills-table {
+  margin: 0 25px;
   @include flex-column;
 }
-.skills-table {
-  @include inline-flex-box;
-  @include flex-column;
+
+.skill {
+    text-align: right;
 }
 
 .skill-bbl {
@@ -149,35 +235,66 @@
   height: 10px;
   border-radius: 10px;
   display: inline-block;
-  background-color: grey;
+  background-color: $not-yet-color;
+  margin: 1px;
 }
 
 .learned {
-  background-color: green;
+  background-color: $learned-color;
 }
 
 .in-progress {
-  background-color: yellow;
+  background-color: $ip-color;
 }
 
 .key {
-  @include inline-flex-box;
-  @include flex-item-align-center;
+  @include flex-justify-center;
+  @include flex-align-center;
+}
+
+.key-bbl {
+  margin: 5px;
+  @include flex-align-center;
+}
+
+.divider {
+  margin: 25px 0;
+  width: 100%;
+  height: 60px;
+  display: block;
+  background-image: url('/assets/divider.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 //Contact Me
-.contact-me {
-  height: 32px;
-  width: 25%;
-  @include flex-space-between;
+#contact-me {
+  padding-bottom: $nav-height;
+  @include flex-align-center;
+
+  h1 {
+    margin: 15px;
+  }
+}
+
+.contact-btns {
+  width: 30%;
 }
 
 .contact-btn {
   background-color: transparent;
+  text-decoration: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  border: 2px solid;
+  @include inline-flex-box;
+  @include flex-align-center;
+  @include flex-justify-center;
 
   img {
     height: 32px;
-    width: auto;
     display: inline-block;
   }
 
@@ -199,16 +316,31 @@
 }
 
 .email {
-  border-radius: 32px;
+  font-family: 'Sacramento', cursive;
+  color: $purple;
+  border-color: $purple;
+  font-size: 40pt;
+
   &:hover {
-    text-decoration: none;
+    color: $back-color;
+    background-color: $purple;
   }
 }
 
 .github {
-  border-radius: 32px;
+  border-color: black;
 }
 
 .linkedin {
-  background-color: transparent;
+  border-color: $linkedin-blue;
+
+  &:hover {
+    background-color: $linkedin-blue;
+  }
+}
+
+.foot-bar {
+  text-align: right;
+  background-color: $resume-color;
+  padding-right: 20px;
 }

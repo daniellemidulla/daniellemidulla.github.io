@@ -7,131 +7,176 @@
   </head>
   <body>
     <nav class="navbar flex-container">
-        <ul class="nav">
-          <li><a class="nav-link" href="">Home</a></li>
-          <li><a class="nav-link" href="#">About Me</a></li>
-          <li><a class="nav-link" href="#">Contact</a></li>
-        </ul>
+        <div class="in-flex-container nav-btns">
+          <a id="nav-home" class="nav-link" href="">DM</a>
+          <a id="nav-about" class="nav-link" href="#">About Me</a>
+          <a id="nav-skills" class="nav-link" href="#">My Skills</a>
+          <a id="nav-contact" class="nav-link" href="#">Contact Me</a>
+        </div>
+        <a class="resume" href="/resume.pdf">Resume</a>
     </nav>
-    <div class="top-picture flex-container">
-      <img class="fish-photo" alt="picture of my biggest fish" src="/assets/fish-photo.jpg" />
-      <a class="resume" href="/resume.pdf">Resume</a>
-    </div>
-    <h1>About Me</h1>
-    <div class="about-me flex-container">
-      <img class="ski-photo" alt="picture of me" src="/assets/ski-photo.jpg"/>
-      <div class="container me-text">
-        Hello, my name is Danielle Midulla.
-        I will be graduating from Dartmouth College with a Computer Science major in June 2017.
-        I was born and raised in New York City.
-        When I'm not on campus, I am an avid fisherwoman and like to knit and crochet things.
-        While on campus, I work for DALI as a developer.
-        During the winter, I am also a ski instructor.
-        I really enjoy working at DALI because I always end up working on really interesting projects.
-        DALI also gives me a place to hang out and code where I am surrounded with people with similar interests and who can answer any questions that might arise.
+    <div class="main-content">
+      <div class="top-picture flex-container-column"></div>
+      <h1 class="my-name">Danielle Midulla</h1>
+      <div class="divider"></div>
+      <div id="about-me">
+        <div class="about-title flex">
+          <h1>About Me </h1>
+        </div>
+        <img class="ski-photo" alt="picture of me" src="/assets/ski-photo.jpg"/>
+        <div class="in-container">
+          <div class="me-text">
+            Hello, my name is Danielle Midulla.
+          </div>
+          <div class="me-text">
+            I was born and raised in New York City and will be graduating from Dartmouth College with a Computer Science major in June 2017.
+          </div>
+          <div class="me-text">
+            When I'm not on campus, I am an avid fisherwoman and like to knit and crochet things.
+          </div>
+          <div class="me-text">
+            While on campus, during the winter term, I am a ski instructor for the PE Department.
+            I also work as a developer at the Digital Arts, Leadership, & Innovation Lab (DALI) Lab.
+          </div>
+          <div class="me-text">
+            I really enjoy working at DALI because I always end up working on really interesting projects.
+          </div>
+          <div class="me-text">
+            DALI also gives me an amazing (and comfortable) place to hang out and code where I am surrounded with people with similar interests and who can answer any questions that might arise.
+          </div>
+          <div class="me-text">
+            During my time at DALI, I have worked on the following projects:
+          </div>
+          <ul>
+            <li>16S: Healthmatters (Web)</li>
+            <li>16F & 17W: Changing Perspectives (Web)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="flex-container" id="skills">
+        <div class="flex">
+          <h1>My Skills</h1>
+        </div>
+        <div class="skills-txt">
+          Here are some skills and languages that I have learned and am still learning.
+        </div>
+        <div class="in-flex-container tables">
+          <table class="skills-table in-flex-container">
+            <caption>Front-end Skills</caption>
+            <tr>
+              <td class="skill">HTML</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+            <tr>
+              <td class="skill">JavaScript</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+            <tr>
+              <td class="skill">ReactJS</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+            <tr>
+              <td class="skill">CSS</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+            </tr>
+            <tr>
+              <td class="skill">Sass</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+          </table>
+          <table class="skills-table in-flex-container">
+            <caption>Back-end Skills</caption>
+            <tr>
+              <td class="skill">Python</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+            <tr>
+              <td class="skill">Java</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+            <tr>
+              <td class="skill">C</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+            <tr>
+              <td class="skill">Ruby on Rails</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl in-progress"></td>
+              <td class="skill-bbl"></td>
+              <td class="skill-bbl"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="key flex">
+          <div>Legend:</div>
+          <div class="key-bbl flex">
+            <div class="skill-bbl"></div>
+            <div>=> Not Yet</div>
+          </div>
+          <div class="key-bbl flex">
+            <div class="skill-bbl in-progress"></div>
+            <div>=> In Progress</div>
+          </div>
+          <div class="key-bbl flex">
+            <div class="skill-bbl learned"></div>
+            <div>=> Proficient</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div id="contact-me" class="flex-container-column">
+        <div class="flex">
+          <h1>Contact Me</h1>
+        </div>
+        <div class="flex-sa-container contact-btns">
+          <a class="email contact-btn" href="mailto:danielle.midulla@gmail.com">@</a>
+          <a class="linkedin contact-btn" href="https://www.linkedin.com/in/daniellemidulla" target="_blank">
+            <img src="./assets/In-2C-128px-TM.png" alt="LinkedIn" class="not-hover" />
+            <img src="./assets/In-White-128px-TM.png" alt="LinkedIn" class="hover" />
+          </a>
+          <a class="github contact-btn" href="https://github.com/daniellemidulla" target="_blank">
+            <img src="./assets/GitHub-Mark-120px-plus.png" alt="Github" class="not-hover"/>
+            <img src="./assets/GitHub-Mark-Light-120px-plus.png" alt="Github" class="hover"/>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="flex-container">
-      Here are some skills and languages that I have learned and am still learning.
-    </div>
-    <div class="flex-container skills">
-      <div class="flex-container tables">
-        <table class="skills-table">
-          <caption>Front-end Skills</caption>
-          <tr>
-            <td>JavaScript</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-            <td class="skill-bbl"></td>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-            <td class="skill-bbl"></td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-          </tr>
-          <tr>
-            <td>Sass</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-            <td class="skill-bbl"></td>
-          </tr>
-        </table>
-        <table class="skills-table">
-          <caption>Back-end Skills</caption>
-          <tr>
-            <td>Python</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-            <td class="skill-bbl"></td>
-          </tr>
-          <tr>
-            <td>Java</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-            <td class="skill-bbl"></td>
-          </tr>
-          <tr>
-            <td>C</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-            <td class="skill-bbl"></td>
-            <td class="skill-bbl"></td>
-          </tr>
-          <tr>
-            <td>Ruby on Rails</td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl learned"></td>
-            <td class="skill-bbl in-progress"></td>
-            <td class="skill-bbl"></td>
-            <td class="skill-bbl"></td>
-          </tr>
-        </table>
-      </div>
-      <div class="key">
-        <div>Legend:</div>
-        <div class="skill-bbl"></div>
-        <div>Not Yet</div>
-        <div class="skill-bbl in-progress"></div>
-        <div>In Progress</div>
-        <div class="skill-bbl learned"></div>
-        <div>Proficient</div>
-      </div>
-    </div>
-    <h1>Contact me:</h1>
-    <div class="flex-sa-container">
-      <div class="container contact-me">
-        <a class="email contact-btn" href="mailto:danielle.midulla@gmail.com">
-          <img src="./assets/email-icon-130.png" alt="Email" class="not-hover"/>
-          <img src="./assets/email-icon-130-white.png" alt="Email" class="hover"/>
-        </a>
-        <a class="github contact-btn" href="https://github.com/daniellemidulla">
-          <img src="./assets/GitHub-Mark-32px.png" alt="Github" class="not-hover"/>
-          <img src="./assets/GitHub-Mark-Light-32px.png" alt="Github" class="hover"/>
-        </a>
-        <a class="linkedin contact-btn" href="https://www.linkedin.com/in/daniellemidulla">
-          <img src="./assets/In-2C-34px-TM.png" alt="LinkedIn" />
-        </a>
-      </div>
+    <div class="foot-bar">
+      Made January 2017 by Danielle Midulla
     </div>
   </body>
   <script src="build/bundle.js" charset="utf-8"></script>
