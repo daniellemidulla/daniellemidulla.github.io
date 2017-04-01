@@ -8,10 +8,10 @@
   <body>
     <nav class="navbar flex-container">
         <div class="in-flex-container nav-btns">
-          <a id="nav-home" class="nav-link" href="">DM</a>
-          <a id="nav-about" class="nav-link" href="#">About Me</a>
-          <a id="nav-skills" class="nav-link" href="#">My Skills</a>
-          <a id="nav-contact" class="nav-link" href="#">Contact Me</a>
+          <a id="nav-home" class="nav-link" href="/">DM</a>
+          <a id="nav-about" class="nav-link" href="#about-me">About Me</a>
+          <a id="nav-skills" class="nav-link" href="#skills">My Skills</a>
+          <a id="nav-contact" class="nav-link" href="#contact-me">Contact Me</a>
         </div>
         <a class="resume" href="/resume.pdf">Resume</a>
     </nav>
@@ -19,7 +19,7 @@
       <div class="top-picture flex-container-column"></div>
       <h1 class="my-name">Danielle Midulla</h1>
       <div class="divider"></div>
-      <div id="about-me">
+      <div id="about-me" class="section">
         <div class="about-title flex">
           <h1>About Me </h1>
         </div>
@@ -42,10 +42,10 @@
             I also work as a developer at the Digital Arts, Leadership, & Innovation Lab (DALI) Lab.
           </div>
           <div class="me-text">
-            I enjoy working at DALI because I always end up involved with really interesting projects.
+            I really enjoy working at DALI because it allows me to work on interesting and challenging projects in a collaborative environment.
           </div>
           <div class="me-text">
-            DALI also gives me an amazing (and comfortable) place to hang out and code where I am surrounded with people with similar interests and who can answer any questions that might arise.
+            DALI also gives me an amazing (and comfortable) environment in which to hang out and code with people who share my interests.
           </div>
           <div class="me-text">
             During my time at DALI, I have worked on the following projects:
@@ -53,11 +53,12 @@
           <ul>
             <li>16S: Healthmatters (Web)</li>
             <li>16F & 17W: Changing Perspectives (Web)</li>
+            <li>17S: AlertDrive</li>
           </ul>
         </div>
       </div>
       <div class="divider"></div>
-      <div class="flex-container" id="skills">
+      <div class="flex-container section" id="skills">
         <div class="flex">
           <h1>My Skills</h1>
         </div>
@@ -142,11 +143,19 @@
               <td class="skill-bbl"></td>
               <td class="skill-bbl"></td>
             </tr>
+            <tr>
+              <td class="skill">ExpressJS</td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl learned"></td>
+              <td class="skill-bbl"></td>
+              <td class="skill-bbl"></td>
+            </tr>
           </table>
         </div>
       </div>
       <div class="divider"></div>
-      <div id="contact-me" class="flex-container-column">
+      <div id="contact-me" class="section flex-container-column">
         <div class="flex">
           <h1>Contact Me</h1>
         </div>
@@ -164,9 +173,7 @@
       </div>
     </div>
     <div class="foot-bar">
-      Made January 2017 by Danielle Midulla
+      Made by Danielle Midulla. Updated March 2017.
     </div>
   </body>
-  <script src="build/bundle.js" charset="utf-8"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </html>
