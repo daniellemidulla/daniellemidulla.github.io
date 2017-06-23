@@ -1,12 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Sacramento);body {
   font-family: Georgia;
-  font-size: 12pt;
+  font-size: 1em;
   margin: 0; }
 
 h1 {
   font-family: 'Sacramento', cursive;
-  font-size: 40pt;
+  font-size: 3em;
   margin: 0; }
+
+h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2em; }
 
 .flex-container {
   width: 100%;
@@ -189,6 +193,52 @@ h1 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center; }
+
+#projects {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center; }
+
+.project {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  width: 90%; }
+  .project h2, .project h3 {
+    margin: 0; }
+  .project p {
+    margin: 5px 10px;
+    text-indent: 15px; }
+  .project .header {
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    width: 100%;
+    margin-top: 10px; }
+  .project .separator {
+    margin: 0 5px;
+    text-indent: 0px; }
+
+.project-image {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center; }
+
+#healthmatters img {
+  max-width: 30vw;
+  max-height: 80vh; }
 
 #contact-me {
   padding-bottom: 60px;
