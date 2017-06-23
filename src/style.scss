@@ -61,17 +61,28 @@ $purple: #DCA6FF;
   -moz-align-items: center;
 }
 
+@mixin flex-align-start {
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+}
+
 body {
   font-family: Georgia;
-  font-size: 12pt;
+  font-size: 1em;
   margin: 0;
 }
 
 h1 {
   font-family: 'Sacramento', cursive;
-  font-size: 40pt;
+  font-size: 3em;
   margin: 0;
   // color: #B94FFD;
+}
+
+h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2em;
 }
 
 //Generic classes
@@ -257,6 +268,48 @@ h1 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+// My Projects
+#projects {
+  @include flex-column;
+  @include flex-align-center;
+}
+
+.project {
+  @include flex-box;
+  @include flex-column;
+  @include flex-align-start;
+  width: 90%;
+
+  h2, h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 5px 10px;
+    text-indent: 15px;
+  }
+
+  .header {
+    @include flex-align-center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .separator {
+    margin: 0 5px;
+  }
+}
+
+.project-image {
+  @include flex-box;
+  @include flex-align-center;
+}
+
+#healthmatters img {
+  max-width: 30vw;
+  max-height: 80vh;
 }
 
 //Contact Me

@@ -11,6 +11,7 @@
           <a id="nav-home" class="nav-link" href="/">DM</a>
           <a id="nav-about" class="nav-link" href="#about-me">About Me</a>
           <a id="nav-skills" class="nav-link" href="#skills">My Skills</a>
+          <a id="nav-projects" class="nav-link" href="#projects">My Projects</a>
           <a id="nav-contact" class="nav-link" href="#contact-me">Contact Me</a>
         </div>
         <a class="resume" href="/resume.pdf">Resume</a>
@@ -25,36 +26,23 @@
         </div>
         <img class="ski-photo" alt="picture of me" src="/assets/headshot.jpg"/>
         <div class="in-container">
-          <div class="me-text">
+          <p class="me-text">
             Hello, my name is Danielle Midulla.
-          </div>
-          <div class="me-text">
+            <br /><br />
             I was born and raised in New York City and am fluent in both English and French.
-          </div>
-          <div class="me-text">
-            I will be graduating in June 2017 from Dartmouth College with a Computer Science major.
-          </div>
-          <div class="me-text">
+            <br /><br />
+            I graduated from Dartmouth College in June 2017 with a Computer Science major and a Theater minor.
+            <br /><br />
             When I'm not on campus, I am an avid fisherwoman and like to knit and crochet.
-          </div>
-          <div class="me-text">
-            While on campus, during the winter term, I am a ski instructor for the PE Department.
-            I also work as a developer at the Digital Arts, Leadership, & Innovation Lab (DALI) Lab.
-          </div>
-          <div class="me-text">
-            I really enjoy working at DALI because it allows me to work on interesting and challenging projects in a collaborative environment.
-          </div>
-          <div class="me-text">
-            DALI also gives me an amazing (and comfortable) environment in which to hang out and code with people who share my interests.
-          </div>
-          <div class="me-text">
-            During my time at DALI, I have worked on the following projects:
-          </div>
-          <ul>
-            <li>16S: Healthmatters (Web)</li>
-            <li>16F & 17W: Changing Perspectives (Web)</li>
-            <li>17S: AlertDrive</li>
-          </ul>
+            <br /><br />
+            While on campus, during the winter term, I was a ski instructor for the PE Department.
+            I also worked as a developer at the Digital Arts, Leadership, & Innovation Lab (DALI) Lab.
+            <br /><br />
+            I really enjoyed working at DALI because it allowed me to work on interesting and challenging projects in a collaborative environment.
+            <br /><br />
+            DALI also gave me an amazing (and comfortable) environment in which to hang out and code with people who share my interests.
+            <br /><br />
+          </p>
         </div>
       </div>
       <div class="divider"></div>
@@ -152,6 +140,96 @@
               <td class="skill-bbl"></td>
             </tr>
           </table>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="flex-container section" id="projects">
+        <div class="flex">
+          <h1>My Projects</h1>
+        </div>
+        <div class="project" id="officehours">
+          <div class="flex header">
+            <h2 class="title">Office Hours App</h2>
+            <span class="separator">•</span>
+            <h3 class="date">Spring 2017</h3>
+          </div>
+          <p>
+            The Office Hours app was built as a final project for <em>Computer Science 052 - Full-Stack Web Development</em>.
+            It was built with Tyler Burnam, Clement Nyanhongo, Joshua Utterback, and Sidney Wijngaarde.
+            The result of this project can be found <a href="http://officehoursapp.surge.sh/" target="_blank">here</a>.
+          </p><p>
+            The purpose of this project was to help make TA lab hours more efficient.
+            In many Computer Science classes at Dartmouth, during TA hours,
+            people sit cramped in a stuffy basement room with no windows and write their names in a queue on the blackboard that ends up with arrows pointing all over the place.
+            Another problem that people have with attending office hours is not knowing when they are occurring because the schedule changes at the last second.
+            So, we built a website where students could manage their classes' office hours and review their schedules.
+            Additionally, they can see the publicly posted questions from each TA session and the current queue of people waiting to speak to a TA.
+          </p><p>
+            On this project, in addition to coding various parts of both the front-end and the API, I worked in a bit of an organizational position.
+            I set up the continuous integration with Travis as well as the automatic deployments and wrote large sections of the documentation.
+            Additionally, I was the one who submitted the assignments for each of the weekly milestones and made sure that my teammates did their parts.
+          </p>
+        </div>
+        <div class="project" id="changing-perspectives">
+          <div class="flex header">
+            <h2 class="title">Changing Perspectives</h2>
+            <span class="separator">•</span>
+            <h3 class="date">Fall 2016 - Winter 2017</h3>
+          </div>
+          <p>
+            This project was done as part of my work at the DALI Lab.
+            The other developers on the project were Odon (Eddy) Orzsik during the Fall term and Kristie Chow and Alex Chan during the Winter term.
+            The result of this project can be found <a href="http://changing-perspectives.surge.sh/" target="_blank">here</a>.
+          </p><p>
+            The purpose of this project was to build an interface for student in K-8 to be able to experience different disabilities.
+            The website is supposed to work in conjunction with the existing curriculum used by Changing Perspectives and found at <a href="http://cpne.org/">http://cpne.org/</a>.
+          </p><p>
+            During my first term on the project, I built the front-end of the project using React.
+            As the only developer on the project for two terms, during the second term, I worked in a leadership position,
+            overseeing the changes that the new developers were making to the front-end while spearheading the work on building an entire back-end API in ExpressJS with mongoDB.
+          </p>
+        </div>
+        <div class="project" id="mappit">
+          <div class="flex header">
+            <h2 class="title">Mappit</h2>
+            <span class="separator">•</span>
+            <h3 class="date">Fall 2016 - Winter 2017</h3>
+          </div>
+          <p>
+            This project was done for <em>COSC 098 - Senior Design and Implementation Project</em> as my culminating experience for my major in Computer Science.
+            It was a group project with Sean Cann, Eric Chen, Edrei Chua, Caleb (Junmo) Kim, and Chi Pham.
+            The result of this project can be found <a href="https://mappit.me/" target="_blank">here</a>.
+          </p><p>
+            The purpose of the project was to create a different system to handle events as many people can have trouble with event information coming in a text format.
+            <em>Mappit</em> solves this problem by presenting the events on a map similar to how airbnb presents their available locations.
+            The map allows people to easily view the events currently occurring near them.
+          </p><p>
+            I worked mostly on front-end logic for this project.
+            After helping to set up the main React structure, I also implemented Redux and became the point person of the group on all things React and Redux.
+            I also helped to set up a lot of the styling, including the use of material-ui React components.
+          </p>
+        </div>
+        <div class="project" id="healthmatters">
+          <div class="flex header">
+            <h2 class="title">Healthmatters</h2>
+            <span class="separator">•</span>
+            <h3 class="date">Spring 2016</h3>
+          </div>
+          <div class="project-image">
+            <img src="assets/healthmatters.jpg" alt="kiosk-image" />
+            <span>
+              <p>
+                This project was built during my work at the DALI lab at the request of a research group on campus.
+                We built the kiosk on the left which recorded the responses of hundreds of responses a day to a question about students' emotional health.
+              </p><p>
+                I joined the project in its final term at Dartmouth.
+                My main contribution was to work on updating the code base so that it can be generalized to more than one question as well as restyling the page.
+                Additionally, I added in integrations with the Giphy API so that, after responding, users were presented with a gif of a cute animal,
+                hopefully incentivizing the use of the kiosk and calming the more stressed users.
+                Finally, I added the functionality to save the results from the daily button clicks and automatically upload them to GitHub at the end of each day.
+              </p>
+            </span>
+          </div>
         </div>
       </div>
       <div class="divider"></div>
